@@ -57,4 +57,4 @@ src/*.dll
 scratch/
 
 .DS_store
-.pdf
+*.pdf
