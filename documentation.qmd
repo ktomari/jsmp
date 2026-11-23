@@ -1,0 +1,14 @@
+---
+title: "Documentation"
+format: html
+---
+
+## Introduction
+
+This document is intended to track notes on the structure of the jsmp and the coding involved in processing it.
+
+## Directories
+
+Most relevant functions are stored in R files in /scripts.
+
+The directory `data-raw` has a `downloads` folder for information scraped from the web, `schema` for administrative files for saving settings and parameters for functions, and `data` for cleaned data.
