@@ -53,3 +53,8 @@ rsconnect/
 src/*.o
 src/*.so
 src/*.dll
+
+scratch/
+
+.DS_store
+.pdf
