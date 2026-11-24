@@ -1,0 +1,11 @@
+project:
+  type: website
+  render:
+    - index.qmd
+
+website:
+  title: "JSMP Explorer"
+
+format:
+  html:
+    theme: materia

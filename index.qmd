@@ -1,0 +1,34 @@
+---
+date: today
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+```{r}
+#| include: false
+library(here)
+source(here::here("scripts", "init.R"))
+library(kableExtra)
+library(dplyr)
+```
+
+# Introduction
+
+This page will serve as a landing page for JSMP analysis and exploration. It is a work in progress.
+
+# Structure
+
+## Final Report
+
+```{r}
+#| echo: false
+tb <- sch$pdf_inventory %>%
+  dplyr::filter(type == "final_report") %>%
+  dplyr::mutate(file = utils::URLdecode(base)) %>%
+  dplyr::select(file, pages)
+
+kableExtra::kable(tb)
+```
+
