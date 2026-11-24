@@ -7,8 +7,19 @@ format: html
 
 This document is intended to track notes on the structure of the jsmp and the coding involved in processing it.
 
+## Getting Started
+
+Run `scripts/init.R` before you running any analysis. But don't run it for any downloading or cleaning scripts.
+
+```{r}
+source("scripts/init.R")
+```
 ## Directories
 
 Most relevant functions are stored in R files in /scripts.
 
 The directory `data-raw` has a `downloads` folder for information scraped from the web, `schema` for administrative files for saving settings and parameters for functions, and `data` for cleaned data.
+
+## Downloading pdfs
+
+The script `download_pdfs.R` will download the pdfs from the site and create a csv file inventorying the pdfs.
