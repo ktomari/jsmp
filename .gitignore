@@ -49,7 +49,7 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# compiled code 
+# compiled code
 src/*.o
 src/*.so
 src/*.dll
@@ -58,3 +58,6 @@ scratch/
 
 .DS_store
 *.pdf
+
+/.quarto/
+**/*.quarto_ipynb
