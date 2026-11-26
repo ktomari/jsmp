@@ -1,4 +1,5 @@
 ---
+title: "Home"
 date: today
 format:
   html:
@@ -16,11 +17,23 @@ library(dplyr)
 
 # Introduction
 
-This page will serve as a landing page for JSMP analysis and exploration. It is a work in progress.
+Welcome to the JSMP Analysis Project, a volunteer effort to critically examine the Correctional Facility Master Plan (CFMP) in the JSMP. The Jail System Master Plan is the original name of the Sacramento County Board of Supervisor's planning process to further examine the future of jail system reforms, partly in response to the Mays Consent Decree. A result of this planning process, the CFMP Final Report was commissioned.
 
-# Structure
+This site is a work in progress and is expect to change iteratively through the first half of 2027. Check back regularly for updates.
 
-## Final Report
+# Site Navigation
+
+In the **Study Guide**, you'll find brief summaries and commentaries of some of the key documents of the JSMP.
+
+# Key Documents
+
+## The Second Memorandum of Agreement
+
+Although not strictly part of the CFMP, this document serves a prelude to the CFMP final report.
+
+## The Final Report
+
+This report, published on October 30, 2026, consists of the following files.
 
 ```{r}
 #| echo: false
@@ -32,3 +45,14 @@ tb <- sch$pdf_inventory %>%
 kableExtra::kable(tb)
 ```
 
+## The Final Report Appendix
+
+```{r}
+#| echo: false
+tb <- sch$pdf_inventory %>%
+  dplyr::filter(type == "appendix5") %>%
+  dplyr::mutate(file = utils::URLdecode(base)) %>%
+  dplyr::select(file, pages)
+
+kableExtra::kable(tb)
+```

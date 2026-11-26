@@ -18,6 +18,7 @@ links_tb <- rvest::html_elements(html_home, "a") %>%
     }
   )) %>%
   dplyr::filter(stringr::str_detect(base, "\\.pdf$")) %>%
+  dplyr::mutate(base2 = utils::URLdecode(base)) %>%
   dplyr::mutate(href = dplyr::case_when(
     stringr::str_detect(href, "http") ~ href,
     .default = paste0("https://oce.saccounty.gov", href)
@@ -40,13 +41,18 @@ links_tb <- links_tb %>%
 purrr::walk(
   1:nrow(links_tb),
   function(row){
+    destfile <- here::here("data-raw", "downloads", links_tb$base[row])
+    if(file.exists(destfile)) {
+      return()
+    }
     curl::curl_download(
       url = links_tb$href[row],
-      destfile = here::here("data-raw", "downloads", links_tb$base[row]),
+      destfile = destfile,
       quiet = FALSE
     )
   }
 )
+
 
 # get md5 hashes
 links_tb <- links_tb %>%

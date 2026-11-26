@@ -1,0 +1,85 @@
+---
+title: "Documents Study Guide"
+date: today
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+```{r}
+#| include: false
+library(kableExtra)
+library(dplyr)
+```
+
+
+# Introduction
+
+This resource is meant to help you read through the various documents in the Correctional Facility Master Plan Final Report. It is *not* prepared by legal scholars or subject matter experts. It is a volunteer-led effort. Use it alongside your own critical analysis as an aid, not a thorough summary.
+
+We recommend that you use this guide as a primer *before* you sit down and read the section of the report you plan to study.
+
+# Second Memorandum of Agreement
+
+Filed in September of 2025, this [Memorandum of Agreement](https://prisonlaw.com/s/250916-Doc-225-1-Second-Memorandum-of-Agreement.pdf) (MOA), as with all MOAs, is a legally binding document which, "details specific actions and responsibilities".[^moa] Specifically, this MOA addresses changes to the implementation of the Mays Consent Decree (MCD) which targets necessary remedial measures around mental health care in Sacramento County jails. As a major outcome of this MOA, the County and the plaintiffs in the Mays settlement agreed to steps to reach compliance with the MCD and a timeline for the County to develop a plan to accomplish these steps (4).
+
+[^moa]: See [investopedia](https://www.investopedia.com/terms/m/mou.asp) and the [University of Alaska Southeast](https://uas.alaska.edu/admin/mous-moas.html)
+
+The MOA begins with a history of the reformation process up until this point. While it jumps around, it loosely follows this timeline of events:
+
+1. The initial Mays Consent Decree (2020).
+2. The First Memorandum of Agreement (2022) and a subsequent rejected remedial plan (the IHSF design plan).
+3. The February 2025 County Board of Supervisors vote to pursue the "Jail System Master Planning" (JSMP) process.
+4. This MOA (2025), which provides further structure and timeline for a plan to address the Mays Consent Decree.
+
+This MOA highlights four key unresolved issues:
+
+> (1) Remediation of [physical plant deficiencies]{.underline} that prevent delivery of adequate health care services;
+(2) Provision of adequate [staffing]{.underline} to deliver adequate mental health care services;
+(3) Provision of adequate [acute]{.underline} mental health level-of-care services at the capacity necessary to meet class member needs; and
+(4) Provision of adequate [Intensive Outpatient Program (IOP)]{.underline} mental health level-of care services at the capacity necessary to meet class member needs...
+
+As a consequence of these unresolved issues, the County Board of Supervisors commissioned this study, the "Correctional Facility Master Plan" (CFMP), to examine how to reform the county jail. Among other things, this study was expected to examine the existing jail facilities, potential steps to respond to the Mays Consent Decree, and planning for the future needs of the jail system more broadly. Finally, in addition to the four unresolved issues, the final three points made in this MOA emphasize safely reducing the jail population in alignment with the MCD.
+
+## Commentary
+
+Beyond the summary above, there are a number of points of interest in this MOA. First, the County is only making incremental changes, and the process of reforming the jails remains an ongoing process (eg. the *unresolved* issues and the suspension of the IHSF plan). There are at least a few major factors that appear to have led to this protracted reform as indicated implicitly or explicitly in this MOA: maintaining current priorities (eg. the status quo levels of incarceration, give or take some inmate capacity); compliance with the Mays Consent Decree; compliance with the Americans with Disabilities Act (ADA); and anticipating future needs of incarceration (eg. how much capacity will be needed). 
+
+The monitoring report of the "Subject Matter Expert" (SME) mentioned in this MOA is worth exploring as it provides the documented issues of the jails in a manner that has to be recognized and acknowledged by the County given its legal weight as a component of the MCD settlement. Perhaps what is most striking is the excerpt taken from the report in which the SME states, "The County **must take immediate steps to secure appropriate inpatient mental health treatment and a continuum of services for people in their custody with serious mental health needs**" (4). The emphasis on urgency is notable given that the final report appears to delay the completion of necessary changes to mental health services far into the future given the proposed timeline for completing facility development.[^sme_urgency]
+
+[^sme_urgency]: The degree to which the extended timeline does or does not address this urgency needs further scrutiny.
+
+Among the stated requirements for the Correctional Facility Master Plan is a list of mental health care objectives as stipulated by the Mays Consent Decree (6). These agreed upon steps are meant to provide:
+
+* programming
+* capacity
+* space
+* staffing
+
+In other words, if the CFMP does not satisfy the MCD, it may not be approved.
+
+As mentioned above, the final section of the MOA "recognizes" that a population reduction of the jails would help with compliance with the MCD. It lists a few options that could be considered in the CFMP to facilitate this reduction:
+
+* diversion
+* out-of-custody mental health treatment settings
+* substance use
+* and other programs as alternatives to incarceration (9).
+
+# Glossary
+
+```{r}
+#| echo: false
+tb <- tibble::tibble(
+  Term = c(
+    "Correctional Facility Master Plan",
+    "Jail System Master Plan",
+    "Mays Consent Decree (MCD)",
+    "Memorandum of Agreement",
+    "Subject Matter Expert"
+  ),
+  Definition = rep("", length(Term))
+)
+kableExtra::kable(tb)
+```
+

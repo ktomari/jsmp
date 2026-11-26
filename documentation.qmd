@@ -14,6 +14,7 @@ Run `scripts/init.R` before you running any analysis. But don't run it for any d
 ```{r}
 source("scripts/init.R")
 ```
+
 ## Directories
 
 Most relevant functions are stored in R files in /scripts.
@@ -23,3 +24,7 @@ The directory `data-raw` has a `downloads` folder for information scraped from t
 ## Downloading pdfs
 
 The script `download_pdfs.R` will download the pdfs from the site and create a csv file inventorying the pdfs.
+
+## Data cleaning
+
+In `download_pdfs.R`, the first metadata file is created, `data-raw/schema/pdf_inventory.csv`. 
